@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="exam2.css">
+<body>
+        <header>
+            <img src="logo.png" alt="panda logo" height="80">   
+	        <title>About Giant Panda</title>
+            <h2>Giant Panda Club</h2>
+            <h3>Celebrating our <span class="shadow">10<sup>th</sup></span> Year</h3>
+        </header>
+        <nav id="nav_menu">
+                <ul>
+                       <li><a href="exam2.html" title="this is the home page">Home</a></li>
+                       <li><a href="why they matter.html" title="this is the why they matter page" >Why they matter</a></li>
+                       <li><a href="fact.html" title="this is the fun fact">Fact</a></li>
+                            <ul>
+                                <li><a href="photos.html" title="this is the photos about pandas page">Fun Photos</a></li>
+                            </ul>
+                            <li><a href="howToHelp.html" title="this is the how to help page">How To Help</a>
+                                <ul>
+                                    <li><a href="signUp.html" title="this is the sign up for email page">Sign Up for Email</a></li>
+                                    <li><a href="donation.html" title="this is the donation page">Make a Donation</a></li>
+                                    <li><a href="become member.html" title="this is the become member page">Become member</a></li>
+                                </ul>
+                       </li>
+                       <li><a href="about us.html" title="this is the about us page">About Us</a>
+                           <ul>
+                               <li><a href="history.html" title="this is the history page">Our History</a></li>
+                               <li><a href="contact us.html" title="this is the contact us page">Contact Information</a></li>
+                               <li><a href="comment page.html" title="this is the comment page page">comment page</a></li>
+                           </ul>
+                       </li>
+                </ul>
+            </nav>
+        <main>
+                <h1>Please join our email list</h1>
+                <form id="email_form" name="email_from" action="join.hmtl" method="get">
+                    <label for="first_name">First Name</label>
+                    <input type="type" id="first_name" name="first_name"><br>
+                    <label for="last_name">Last Name</label>
+                    <input type="type" id="last_name" name="last_name"><br>
+                    <label for="email_address1">Email Address: </label>
+                    <input type="type" id="email_address1" name="email_address1"><br>
+                    <label for="email_address2">Re-enter Email Address: </label>
+                    <input type="type" id="email_address2" name="email_address2"><br>
+                    <label>&nbsp;</label>
+                    <input type="button" id="join_list" value="Jion our List" title="This will submit your email to our database."><br>
+                </form>
+            </main>
+            <footer>
+                    <p>&copy; 2016, panda, Fresno, AL 36124</p>
+            </footer>     
+        </body>
+        <script>
+            "use strict";
+            var $ = function(id) {
+                return document.getElementById(id);
+            };
+        
+            var joinList = function() {
+            var firstName = $("first_name").value;
+            var lastName = $("last_name").value;
+            var emailAddress1 = $("email_address1").value;
+            var emailAddress2 = $("email_address2").value;
+            var errorMessage = "";
+         
+            if (emailAddress1 == "") {
+                errorMessage = "First email address entry required";
+                $("email_address1").focus();
+            }
+        
+            else if (emailAddress2 == "") {
+                errorMessage = "Second email address entry required";
+                $("email_address2").focus();
+            }  
+        
+            else if (emailAddress2 != emailAddress1) {
+                errorMessage = "Email address entries must match";
+                $("email_address2").focus();
+            }
+        
+            else if (firstName == "") {
+                errorMessage = "First name entry required";
+                $("first_name").focus();
+            }
+
+            else if (lastName == "") {
+                errorMessage = "First name entry required";
+                $("last_name").focus();
+            }
+         
+            if (errorMessage == "") {
+                $("email_form").submit();
+            }
+            else {
+                alert(errorMessage);
+            }
+            };
+            
+            window.onload = function() {
+                $("join_list").onclick = joinList;
+                $("email_address1").focus();
+            };
+        </script>

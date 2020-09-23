@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="exam2.css">
+<title>become member</title>
+<body>
+        <header>
+            <img src="logo.png" alt="panda logo" height="80">   
+	        <title>About Giant Panda</title>
+            <h2>Giant Panda Club</h2>
+            <h3>Celebrating our <span class="shadow">10<sup>th</sup></span> Year</h3>
+        </header>
+        <nav id="nav_menu">
+                <ul>
+                       <li><a href="exam2.html" title="this is the home page">Home</a></li>
+                       <li><a href="why they matter.html" title="this is the why they matter page" >Why they matter</a></li>
+                       <li><a href="fact.html" title="this is the fun fact">Fact</a></li>
+                            <ul>
+                                <li><a href="photos.html" title="this is the photos about pandas page">Fun Photos</a></li>
+                            </ul>
+                            <li><a href="howToHelp.html" title="this is the how to help page">How To Help</a>
+                                <ul>
+                                    <li><a href="signUp.html" title="this is the sign up for email page">Sign Up for Email</a></li>
+                                    <li><a href="donation.html" title="this is the donation page">Make a Donation</a></li>
+                                    <li><a href="become member.html" title="this is the become member page">Become member</a></li>
+                                </ul>
+                       </li>
+                       <li><a href="about us.html" title="this is the about us page">About Us</a>
+                           <ul>
+                               <li><a href="history.html" title="this is the history page">Our History</a></li>
+                               <li><a href="contact us.html" title="this is the contact us page">Contact Information</a></li>
+                               <li><a href="comment page.html" title="this is the comment page page">comment page</a></li>
+                           </ul>
+                       </li>
+                </ul>
+            </nav>
+        <fieldset>
+                <legend>Registration Information</legend>
+                <label for="email">E-Mail:</label>
+                <input type="email" name="email" id="email" autofocus required><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required
+                    placeholder="At least 6 letters or numbers" pattern="[a-zA-Z0-9]{6,}"
+                    title="Must be at least 6 alphanumeric characters"><br>
+                <label for="verify">Verify Password:</label>
+                <input type="password" name="verify" id="verify" required><br>
+            </fieldset>
+            <fieldset>
+                <legend>Member Information</legend>
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name" required><br>
+                <label for="state">State:</label>
+                <input type="text" name="state" id="state" required
+                    maxlength="2" placeholder="2-character code"><br>
+                <label for="zip">ZIP Code:</label>
+                <input type="text" name="zip" id="zip" required
+                    placeholder="5 or 9 digits" pattern="^\d{5}(-\d{4})?$"
+                    title="Either 5 or 9 digits"><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone"
+                    placeholder="999-999-9999" pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                    title="Must be 999-999-999 format"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Membership Information</legend>
+                <label for="membership_type">Membership Type:</label>
+                <select name="membership_type" id="membership_type">
+                    <option value="j">Junior</option>
+                    <option value="r">Regular</option>
+                    <option value="c">Charter</option>
+                </select><br>
+                <label for="starting_date">Starting Date:</label>
+                <input type="date" name="starting_date" id="starting_date" required><br>
+                <label for="tickets">Tickets for Guests:</label>
+                <input type="number" name="tickets" id="tickets"
+                    value="2" min="1" max="4" placeholder="from 1 to 4"><br>
+            </fieldset>
+            <fieldset id="buttons">
+                <legend>Submit Your Membership</legend>
+                <label>&nbsp;</label>
+                <input type="submit" id="submit" value="Submit" title="you will submit a member form to our database.">
+                <input type="reset" id="reset" value="Reset Fields" title="This will reset all the value."><br>
+            </fieldset>
+            </form>
+    <footer>
+        <p>&copy; 2016, panda, Fresno, AL 36124</p>
+    </footer>   
+</body>

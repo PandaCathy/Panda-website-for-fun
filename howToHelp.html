@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="exam2.css">
+<body>
+        <header>
+            <img src="logo.png" alt="panda logo" height="80">   
+	        <title>About Giant Panda</title>
+            <h2>Giant Panda Club</h2>
+            <h3>Celebrating our <span class="shadow">10<sup>th</sup></span> Year</h3>
+        </header>
+        <nav id="nav_menu">
+                <ul>
+                       <li><a href="exam2.html" title="this is the home page">Home</a></li>
+                       <li><a href="why they matter.html" title="this is the why they matter page" >Why they matter</a></li>
+                       <li><a href="fact.html" title="this is the fun fact">Fact</a></li>
+                            <ul>
+                                <li><a href="photos.html" title="this is the photos about pandas page">Fun Photos</a></li>
+                            </ul>
+                            <li><a href="howToHelp.html" title="this is the how to help page">How To Help</a>
+                                <ul>
+                                    <li><a href="signUp.html" title="this is the sign up for email page">Sign Up for Email</a></li>
+                                    <li><a href="donation.html" title="this is the donation page">Make a Donation</a></li>
+                                    <li><a href="become member.html" title="this is the become member page">Become member</a></li>
+                                </ul>
+                       </li>
+                       <li><a href="about us.html" title="this is the about us page">About Us</a>
+                           <ul>
+                               <li><a href="history.html" title="this is the history page">Our History</a></li>
+                               <li><a href="contact us.html" title="this is the contact us page">Contact Information</a></li>
+                               <li><a href="comment page.html" title="this is the comment page page">comment page</a></li>
+                           </ul>
+                       </li>
+                </ul>
+            </nav>
+        <footer>
+            <p>&copy; 2016, panda, Fresno, AL 36124</p>
+        </footer>    
+        <main id="faqs">    
+        <h1>How To Help?</h1>
+        <h8><a href="#" title="It will open the text if you click it">Adopt a Panda</a></h8><br>
+        <div>
+            <p>Giant pandas are found only in the temperate forests of China. Although classified as a carnivore, the panda’s diet consists almost exclusively of bamboo. Despite being one of the most popular animals in the world, giant pandas are threatened by habitat fragmentation and unsustainable development. It is estimated that 1,800 pandas remain in the wild. WWF is the primary international conservation organization protecting pandas and their habitat.
+            </p>
+        </div>
+        <h8><a href="#" title="It will open the text if you click it">Become a Member</a></h8><br>
+        <div>
+            <p>By renewing your WWF membership today, your generous gift will help save endangered species, protect wild habitats, and build a future in which people live in harmony with nature.
+
+                    As a special thank you, if you renew with a gift of at least $25, we'll send you a free gift of your choosing.
+            </p>
+        </div>
+        <h8><a href="#" title="It will open the text if you click it">Make a Donation</a></h8><br>
+        
+            <p>You can protect threatened species and their habitats today with a donation to World Wildlife Fund. Your support of WWF's global conservation work will make a world of difference.</p>
+        
+    </main>
+</body>
+<script>
+    "use strict";
+    var $ = function(id) { return document.getElementById(id); };
+
+    var toggle = function() {
+    var h8 = this; 
+    var div = h8.nextElementSibling; 
+    
+    if (h8.hasAttribute("class")) {
+        h8.removeAttribute("class");
+    } else {
+        h8.setAttribute("class", "minus");
+    }
+
+    if (div.hasAttribute("class")) {
+        div.removeAttribute("class");
+    } else {
+        div.setAttribute("class", "open");
+    }
+};
+
+window.onload = function() {
+    var faqs = $("faqs");
+    var h8Elements = faqs.getElementsByTagName("h8");
+
+    for (var i = 0; i < h8Elements.length; i++ ) {
+        hElements[i].onclick = toggle;
+    }
+    h8Elements[0].firstChild.focus();
+};
+</script>
